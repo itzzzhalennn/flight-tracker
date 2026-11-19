@@ -28,7 +28,7 @@ st.caption("Live aircraft positions around the world")
 @st.cache_data(ttl=900)
 def get_aircraft():
     url = "https://opensky-network.org/api/states/all"
-    response = requests.get(url, timeout=90
+    response = requests.get(url, timeout=90)
     response.raise_for_status()
     return response.json()
 
