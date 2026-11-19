@@ -104,11 +104,9 @@ except requests.RequestException as error:
     st.error(f"Connection failed: {error}")
 
 except Exception as error:
-    st.error(f"Something went wrong: {error}")
+    st.er
 
-st.caption(
-    "Data: OpenSky Network. Coverage is incomplete; "
-    "this is not an operational aviation system."
+st.caption("Data: OpenSky Network. Coverage is incomplete.")
 
 except Exception as error:
     st.error(f"Something went wrong: {error}")
