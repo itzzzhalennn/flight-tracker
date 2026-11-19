@@ -98,7 +98,8 @@ except requests.HTTPError as error:
     st.info("The OpenSky API may require authentication or have reached its request limit.")
 
 except requests.RequestException:
-    st.error("Could not connect to the aircraft data service.")
+    except requests.RequestException as error:
+    st.error(f"Connection failed: {error}")
 
 except Exception as error:
     st.error(f"Something went wrong: {error}")
