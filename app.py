@@ -97,18 +97,9 @@ except requests.HTTPError as error:
     st.error(f"Aircraft data service error: {error}")
     st.info("The OpenSky API may require authentication or have reached its request limit.")
 
-except requests.HTTPError as error:
-    st.error(f"Aircraft data service error: {error}")
 
 except requests.RequestException as error:
     st.error(f"Connection failed: {error}")
 
 except Exception as error:
     st.er
-
-st.caption("Data: OpenSky Network. Coverage is incomplete.")
-
-except Exception as error:
-    st.error(f"Something went wrong: {error}")
-
-st.caption("Data: OpenSky Network. Coverage is incomplete; this is not an operational aviation system.")
